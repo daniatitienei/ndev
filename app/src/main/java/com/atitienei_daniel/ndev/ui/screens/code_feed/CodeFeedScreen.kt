@@ -6,6 +6,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
@@ -77,6 +78,32 @@ fun CodeFeedScreen() {
                 )
             }
 
+            Spacer(modifier = Modifier.height(15.dp))
+        }
+
+        item {
+            Text(
+                text = stringResource(id = R.string.see_posts_from),
+                modifier = Modifier.padding(horizontal = 20.dp),
+                fontWeight = FontWeight.Bold,
+                style = MaterialTheme.typography.titleLarge
+            )
+        }
+
+        item {
+            LazyRow(contentPadding = PaddingValues(horizontal = 20.dp)) {
+                item {
+                    ElevatedButton(onClick = { /*TODO*/ }) {
+                        Icon(
+                            imageVector = Icons.Rounded.Add,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text(text = stringResource(id = R.string.add_more))
+                    }
+                }
+            }
             Spacer(modifier = Modifier.height(15.dp))
         }
 

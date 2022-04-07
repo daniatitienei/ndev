@@ -3,4 +3,6 @@
     <string name="newest_posts">Newest posts</string>
     <string name="create_new_post">Create new post</string>
     <string name="write_something">Write something</string>
+    <string name="see_posts_from">See posts from</string>
+    <string name="add_more">Add more</string>
 </resources>
